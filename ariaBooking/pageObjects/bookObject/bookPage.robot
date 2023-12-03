@@ -5,31 +5,31 @@ Variables        book-locator.yaml
 *** Keywords ***
 Click Booking Button
     Click Element    ${book-button}
-    Sleep    2s
-
+    Sleep    3s
+    
 Click From City button
     Click Element    ${from-city-button}
-    Sleep    2s
+    Sleep    3s
 
 From City Select
     Click Element    ${from-city-select}
-    Sleep    2s
+    Sleep    3s
 
 CLick To City Button
     Click Element    ${to-city-button}
-    Sleep    2s
+    Sleep    3s
 
 To City Select
     Click Element    ${to-city-select}
-    Sleep    2s
+    Sleep    3s
 
 Click Class Button
     Click Element    ${class-button}
-    Sleep    2s
+    Sleep    3s
 
 Class Select
     Click Element    ${class-select}
-    Sleep    2s
+    Sleep    3s
 
 Click Start Date Button
     Click Element    ${start-date-button}
@@ -55,7 +55,7 @@ End Date Ok Button
     Click Element    ${end-date-ok}
     Sleep    3s
 
-Flight Button
+Flight Radio Button
     Click Element    ${flight-button}
     Sleep    2s
 
@@ -77,3 +77,4 @@ Book Successfull Confirmation
     
 Click Book Button Without Login
     Click Element    ${book-button-no-login}
+

@@ -17,3 +17,5 @@ flight-price-button: '//android.widget.Button[@resource-id="com.example.myapplic
 price-confirm-button: '//android.widget.Button[@resource-id="com.example.myapplication:id/confirm_order"]'
 book-confirmation: '//android.widget.CheckedTextView[@resource-id="com.example.myapplication:id/checkedTextView"]'
 book-button-no-login: '//android.widget.Button[@resource-id="com.example.myapplication:id/button5"]'
+choose-city-page: 'id=00000000-0000-057f-ffff-ffff0000003f'
+choose-price-page: 'id=00000000-0000-0581-ffff-ffff00000089'

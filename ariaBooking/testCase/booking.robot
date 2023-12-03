@@ -19,7 +19,7 @@ Successfull Flight Booking
     Click End Date Button
     End Date Select
     End Date Ok Button
-    Flight Button
+    Flight Radio Button
     Book Confirm Button
     Flight Price Button
     Price Confirm Button
@@ -32,3 +32,16 @@ Booking Without Sign in
     Click Book Button Without Login
     Page Should Not Contain Element    ${from-city-button}
     Close Flight Apllication
+
+Booking Without Choose Start And End Date
+    Run Keyword    Login Valid Credential
+    Click Booking Button
+    Click From City button
+    From City Select
+    CLick To City Button
+    To City Select
+    Click Class Button
+    Class Select
+    Flight Radio Button
+    Book Confirm Button
+    Should Be Equal    ${choose-price-page}    ${choose-city-page}

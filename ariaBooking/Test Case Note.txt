@@ -1,0 +1,7 @@
+Test Case
+1. Postitive case   
+        Successfull Flight Booking              Expect, Get booking id         PASS (Get booking id)   
+2. negative case 
+        Booking Without Sign in                 Expect, Stay at current page    PASS (Stay at current page)  
+        Booking without choose date             Expect, Stay at current page    FAIL (Go to next page)   
+        Booking without choose order type       Expect, stay at current page    FAIL (Go to next page)  
