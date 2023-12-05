@@ -1,4 +1,4 @@
-Test Case
+Test Cases
 1. Positive Case - Search valid booking ID
 2. Negative Case - Search invalid booking ID
 
