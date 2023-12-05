@@ -1,6 +1,6 @@
 *** Settings ***
-Resource        ../Base/Base.robot
-Resource        ../HomePageObject/homePage.robot
+Resource        ../base/base.robot
+Resource        ../homePageObject/homePage.robot
 Variables       ../bookflightObject/book-locators.yaml
 Variables       ../homePageObject/home-locators.yaml
 Variables       ../loginPageObject/login-locators.yaml
@@ -20,7 +20,7 @@ Input Password Sign In On Login Page
     Input Password    ${password-input}        ${password}
 Click Button Sign In On Login page
     
-    Click Element    ${log-in-button}
+    Click Element    ${sign-in-button}
 
 Click Book Button On Book Page
     Wait Until Element Is Visible    ${book-button}

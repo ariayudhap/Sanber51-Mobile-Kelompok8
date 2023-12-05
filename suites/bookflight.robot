@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../PageObjects/Base/Base.robot
-Resource    ../PageObjects/HomePageObject/homePage.robot
-Resource    ../PageObjects/LoginPageObject/loginPage.robot
-Resource    ../PageObjects/bookflightObject/bookflight.robot
+Resource    ../pageObjects/base/base.robot
+Resource    ../pageObjects/homePageObject/homePage.robot
+Resource    ../pageObjects/loginPageObject/loginPage.robot
+Resource    ../pageObjects/bookflightObject/bookflight.robot
 
 *** Keywords ***
 
