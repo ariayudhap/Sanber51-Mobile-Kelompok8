@@ -1,7 +1,6 @@
 *** Settings ***
 Resource         base.robot
 Variables        page-rossy.yaml
-Resource         ../suitesRossy/searchRossy.robot
 
 *** Keywords ***
 Click Sign In button on Homepage
