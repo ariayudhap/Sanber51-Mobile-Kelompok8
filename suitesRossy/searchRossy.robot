@@ -17,4 +17,5 @@ Search Valid Booking ID
     Click Button Search
     Search Booking ID                               ${valid-bookingId}                    
     Click Button Search bookingId
+    Check bookingId is Valid
     Close Flight Application
