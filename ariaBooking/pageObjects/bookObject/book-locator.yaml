@@ -7,7 +7,7 @@ class-button: '//android.widget.Spinner[@resource-id="com.example.myapplication:
 class-select: '//android.widget.TextView[@resource-id="android:id/text1" and @text="Business"]'
 start-date-button: '//android.widget.TextView[@resource-id="com.example.myapplication:id/textStartDate"]'
 start-date-select: '//android.view.View[@content-desc="15 August 2019"]'
-start-date-ok: '//android.widget.Button[@resource-id="android:id/button1"]'
+start-date-ok: 'android:id/button1'
 end-date-button: '//android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]'
 end-date-select: '//android.view.View[@content-desc="16 August 2019"]'
 end-date-ok: '//android.widget.Button[@resource-id="android:id/button1"]'

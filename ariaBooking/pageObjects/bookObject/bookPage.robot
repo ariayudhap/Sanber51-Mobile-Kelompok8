@@ -49,31 +49,33 @@ Click End Date Button
 
 End Date Select
     Click Element    ${end-date-select}
-    Sleep    3s
+    Wait Until Element Is Visible    ${end-date-ok}
 
 End Date Ok Button
+    Element Should Be Visible    ${end-date-ok}
     Click Element    ${end-date-ok}
     Sleep    3s
-
+    
 Flight Radio Button
     Click Element    ${flight-button}
-    Sleep    2s
+    Sleep    3s
 
-Book Confirm Button 
+Book Confirm Button
+    Wait Until Element Is Visible    ${book-confirm-button}
     Click Element    ${book-confirm-button}
-    Sleep    2s
-
+    Sleep    3s
+    
 Flight Price Button
     Click Element    ${flight-price-button}
-    Sleep    2s
+    Sleep    3s
 
 Price Confirm Button
     Click Element    ${price-confirm-button}
-    Sleep    2s
+    Sleep    3s
 
 Book Successfull Confirmation
     Page Should Contain Element    ${book-confirmation}
-    Sleep    2s
+    Sleep    3s
     
 Click Book Button Without Login
     Click Element    ${book-button-no-login}
