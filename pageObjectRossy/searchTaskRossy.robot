@@ -31,3 +31,7 @@ Search Booking ID
 
 Click Button Search bookingId
     Click Element        ${click-button-search}
+
+Check bookingId is Valid
+    Sleep    5s
+    Page Should Contain Text    Departed
