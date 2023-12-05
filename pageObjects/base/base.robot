@@ -1,22 +1,24 @@
 *** Settings ***
-Library        AppiumLibrary
+Library                AppiumLibrary
+
 
 *** Variables ***
-${REMOTE_URL}            http://127.0.0.1:4723/wd/hub
-${PLATFORM_NAME}         Android
-${PLATFORM_VERSION}      12.0
-${DEVICE_NAME}           emulator-5554
-${APP_PACKAGE}           com.example.myapplication
-${APP_ACTIVITY}          com.example.myapplication.MainActivity
+${remote_url}                      http://127.0.0.1:4723/wd/hub
+${platformName}                    Android
+${platformVersion}                 9.0
+${deviceName}                      emulator-5554
+${appActivity}                     com.example.myapplication.MainActivity
+${appPackage}                      com.example.myapplication
+
 
 *** Keywords ***
-Open Flight Application
-    Open Application    remote_url=${REMOTE_URL}  
-    ...                 platformName=${PLATFORM_NAME} 
-    ...                 platformVersion =${PLATFORM_VERSION}
-    ...                 deviceName=${DEVICE_NAME}
-    ...                 appPackage=${APP_PACKAGE} 
-    ...                 appActivity=${APP_ACTIVITY}  
-    
+Open Flight Application       
+    Open Application               remote_url=${remote_url}
+    ...                            platformName=${platformName}
+    ...                            platformVersion=${platformVersion}
+    ...                            deviceName=${deviceName}
+    ...                            appPackage=${appPackage}
+    ...                            appActivity=${appActivity}
+
 Close Flight Application
-    Close Application
+    Close Application  

@@ -1,101 +1,83 @@
 *** Settings ***
-Resource        ../base.robot
-Variables       book-locators.yaml
-
+Resource        ../Base/Base.robot
+Resource        ../HomePageObject/homePage.robot
+Variables       ../bookflightObject/book-locators.yaml
+Variables       ../homePageObject/home-locators.yaml
+Variables       ../loginPageObject/login-locators.yaml
 
 *** Keywords ***
-Click Book Menu After Login
-    Wait Until Element Is Visible    ${book-menu-button}
-    Click Element    ${book-menu-button}
+Click Sign Button
+    Click Sign In Button On Home Screen
 
-Click One Way Trip
-    Wait Until Element Is Visible    ${one-way-button}
-    Click Element    ${one-way-button}
+Input Username Sign In On Login Page
+    [Arguments]       ${username}
+    Wait Until Element Is Visible    ${username-input}
+    Input Text        ${username-input}        ${username}
 
-Click Round Trip
-    Wait Until Element Is Visible  ${round-trip-button}
-    Click Element    ${round-trip-button}
+Input Password Sign In On Login Page
+    [Arguments]        ${password}
+    Wait Until Element Is Visible    ${password-input}
+    Input Password    ${password-input}        ${password}
+Click Button Sign In On Login page
     
-Select From City
-    Click Element    ${from-city-dropdown}
-    Wait Until Element Is Visible    ${view-list-form}
+    Click Element    ${log-in-button}
 
-Select New York
-    Wait Until Element Is Visible    ${val-newyork}
-    Click Element    ${val-newyork}
+Click Book Button On Book Page
+    Wait Until Element Is Visible    ${book-button}
+    Click Element     ${book-button}
 
-Select Chicago
-    Wait Until Element Is Visible    ${val-chicago}
-    Click Element    ${val-chicago}
+Choose One Away Trip
+    Wait Until Element Is Visible    ${one-away-element}
+    Click Element    ${one-away-element}
 
-Select Toronto
-    Wait Until Element Is Visible    ${val-toronto}
-    Click Element    ${val-toronto}
+Choose Round Trip
+    Wait Until Element Is Visible    ${round-trip-element}
+    Click Element    ${round-trip-element}
+Choose fligt from
+    Wait Until Element Is Visible    ${spinner-from}  
+    Click Element    ${spinner-from}
+    Wait Until Element Is Visible    ${city-option-from}
+    Click Element    ${city-option-from}
 
-Select To City
-    Click Element    ${to-city-dropdown}
-    Wait Until Element Is Visible    ${view-list-form}
-    
-Select London
-    Wait Until Element Is Visible    ${val-london}
-    Click Element    ${val-london}
+Choose Destination City
+    Wait Until Element Is Visible    ${spinner-to}
+    Click Element    ${spinner-to}
+    Wait Until Element Is Visible     ${city-option-to}
+    Click Element    ${city-option-to}
 
-Select Paris
-    Wait Until Element Is Visible    ${val-paris}
-    Click Element    ${val-paris}
-
-Select Ottawa
-    Wait Until Element Is Visible    ${val-ottawa}
-    Click Element    ${val-ottawa}
-
-Select Flight Class
-    Click Element    ${class-dropdown}
-    Wait Until Element Is Visible    ${view-list-form}
-
-Select Economy
-    Wait Until Element Is Visible    ${val-economy}
-    Click Element    ${val-economy}
-
-Select Business
-    Wait Until Element Is Visible    ${val-business}
-    Click Element    ${val-business}
-
-Select First
-    Wait Until Element Is Visible    ${val-first}
-    Click Element    ${val-first}
-
-Select Start Date
+Choose Class 
+    Wait Until Element Is Visible    ${spinner-class}
+    Click Element    ${spinner-class}
+    Wait Until Element Is Visible    ${class-option}
+    Click Element    ${class-option}
+Choose Start Date
+    Wait Until Element Is Visible    ${start-date}
     Click Element    ${start-date}
-    Wait Until Element Is Visible       ${month-view-date}
-    Wait Until Element Is Visible       ${button-ok-date}
-    Click Element    ${text-start-date}
-    Click Element    ${button-ok-date}
-
-Select End Date
+    Wait Until Element Is Visible     ${date-picker-start}
+    Click Element    ${date-picker-start}
+    Click Element    ${btnok-date}
+Choose End Date
+    Wait Until Element Is Visible    ${end-date}
     Click Element    ${end-date}
-    Wait Until Element Is Visible   ${month-view-date}
-    Wait Until Element Is Visible    ${button-ok-date}
-    Click Element    ${text-end-date}
-    Click Element    ${button-ok-date}
+    Wait Until Element Is Visible     ${date-picker-start}
+    Click Element    ${date-picker-end}
+    Click Element    ${btnok-date}
+Choose Flight 
+    Wait Until Element Is Visible    ${flight-Radio-Button}
+    Click Element    ${flight-Radio-Button}
+Click Button Book
+    Wait Until Element Is Visible    ${book-flight-button}
+    Click Element    ${book-flight-button}
 
-Select Book Type Flight
-    Click Element    ${flight-radio-button}
+Choose Price 
+     Wait Until Element Is Visible    ${choose-flight-book}
+     Click Element    ${choose-flight-book}
 
-Select Book Type Flight And Hotel
-    Click Element    ${flight-hotel-radio-button}
+Click Confirm Order
+    Wait Until Element Is Visible    ${confirm-order}
+     Click Element    ${confirm-order}
 
-Select Book Type Plus Min 1 Day
-    Click Element    ${day-checkbox}
+# Close Flight Application
+#     Close Flight Application
 
-Click Submit Flight
-    Click Element    ${book-button-flight}
-
-Select Flight Price
-    Wait Until Element Is Visible    ${price-second}
-    Click Element    ${price-second}
-
-Click Confirm Order Booking Flight
-    Click Element    ${button-confirm-order}
-
-Show Message Success Booking
-    Wait Until Page Contains Element    ${should-message-booking}
+    
