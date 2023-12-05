@@ -2,6 +2,7 @@
 Resource         base.robot
 Variables        page-rossy.yaml
 
+
 *** Keywords ***
 Click Sign In button on Homepage
     Click Element         ${sign-in-button}
