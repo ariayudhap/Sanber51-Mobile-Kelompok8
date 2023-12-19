@@ -1,9 +1,0 @@
-
-Test Cases
-1. Positive Case - Search valid booking ID
-
-Steps Positive Case:
-1. Open Application
-2. Sign in
-3. Click button Search
-4. Input valid Booking ID
