@@ -1,0 +1,18 @@
+book-button: '//*[@resource-id="com.example.myapplication:id/book"]'
+one-away-element: '//*[@text="ONE WAY"]'
+round-trip-element: '//*[@text="ROUND TRIP"]'
+spinner-from: '//*[@resource-id="com.example.myapplication:id/spinnerFrom"]'
+spinner-to: '//*[@resource-id="com.example.myapplication:id/spinnerTo"]'
+spinner-class: '//*[@resource-id="com.example.myapplication:id/spinnerClass"]'
+city-option-from : //*[@resource-id="android:id/text1" and @text="Chicago"]
+city-option-to : //*[@resource-id="android:id/text1" and @text="Ottawa"]
+class-option: '//*[@resource-id="android:id/text1" and @text="First"]'
+start-date: '//*[@resource-id="com.example.myapplication:id/textStartDate"]'
+btnok-date : '//*[@resource-id="android:id/button1"]'
+end-date:   '//*[@resource-id="com.example.myapplication:id/textEndDate"]'
+date-picker-start: '//*[@content-desc="15 August 2019"]'
+date-picker-end: '//*[@content-desc="15 August 2019"]'
+flight-Radio-Button: '//*[@resource-id="com.example.myapplication:id/radioButtonFlight"]'
+book-flight-button: '//*[@resource-id="com.example.myapplication:id/book_flight"]'
+choose-flight-book: '//*[@resource-id="com.example.myapplication:id/price4"]'
+confirm-order: '//*[@resource-id="com.example.myapplication:id/confirm_order"]'
