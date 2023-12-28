@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231205 16:03:44.612" rpa="false" schemaversion="4">
 <suite id="s1" name="searchRossy" source="C:\Users\yesdok\Desktop\Sanber51-NewRepo\Sanber51-MobileQA-Kelompok8\suitesRossy\searchRossy.robot">
 <test id="s1-t1" name="Search Valid Booking ID" line="11">
@@ -11,6 +12,19 @@
 <arg>udid=${udid}</arg>
 <arg>appPackage=${appPackage}</arg>
 <arg>appActivity=${appActivity}</arg>
+=======
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231204 19:18:29.662" rpa="false" schemaversion="4">
+<suite id="s1" name="loginNegative" source="d:\Software Testing\branchAzka\suites\loginNegative.robot">
+<test id="s1-t1" name="Login Invalid Credential" line="10">
+<kw name="Open Flight Application" library="base">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+>>>>>>> 82faafe (Login Negative)
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
@@ -18,6 +32,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<<<<<<< HEAD
 <status status="PASS" starttime="20231205 16:03:45.043" endtime="20231205 16:04:00.789"/>
 </kw>
 <status status="PASS" starttime="20231205 16:03:45.043" endtime="20231205 16:04:00.789"/>
@@ -138,10 +153,79 @@ criteria is com.example.myapplication:id/flight_number</msg>
 <status status="PASS" starttime="20231205 16:04:19.973" endtime="20231205 16:04:20.087"/>
 </kw>
 <status status="PASS" starttime="20231205 16:04:14.973" endtime="20231205 16:04:20.087"/>
+=======
+<status status="PASS" starttime="20231204 19:18:30.455" endtime="20231204 19:18:44.622"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:30.454" endtime="20231204 19:18:44.622"/>
+</kw>
+<kw name="Click Sign In Button On Home Page" library="homePage">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${sign_in_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231204 19:18:44.629" level="INFO">Clicking element '//*[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg timestamp="20231204 19:18:46.001" level="INFO">xpath criteria: //*[@resource-id="com.example.myapplication:id/login"]</msg>
+<status status="PASS" starttime="20231204 19:18:44.624" endtime="20231204 19:18:46.001"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:44.623" endtime="20231204 19:18:46.002"/>
+</kw>
+<kw name="Input Username On Login Page" library="loginPage">
+<arg>${INVALID_USERNAME}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${username_input}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231204 19:18:47.030" level="INFO">xpath criteria: //*[@resource-id="com.example.myapplication:id/username"]
+xpath criteria: //*[@resource-id="com.example.myapplication:id/username"]</msg>
+<status status="PASS" starttime="20231204 19:18:46.004" endtime="20231204 19:18:47.031"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231204 19:18:47.036" level="INFO">Typing text 'invalid' into text field '//*[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg timestamp="20231204 19:18:47.240" level="INFO">xpath criteria: //*[@resource-id="com.example.myapplication:id/username"]</msg>
+<status status="PASS" starttime="20231204 19:18:47.031" endtime="20231204 19:18:47.241"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:46.003" endtime="20231204 19:18:47.241"/>
+</kw>
+<kw name="Input Password On Login Page" library="loginPage">
+<arg>${INVALID_PASSWORD}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${password_input}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231204 19:18:47.832" level="INFO">xpath criteria: //*[@resource-id="com.example.myapplication:id/password"]</msg>
+<status status="PASS" starttime="20231204 19:18:47.244" endtime="20231204 19:18:47.832"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231204 19:18:47.836" level="INFO">Typing text '1234567890' into text field '//*[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg timestamp="20231204 19:18:48.018" level="INFO">xpath criteria: //*[@resource-id="com.example.myapplication:id/password"]</msg>
+<status status="PASS" starttime="20231204 19:18:47.834" endtime="20231204 19:18:48.019"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:47.242" endtime="20231204 19:18:48.020"/>
+</kw>
+<kw name="Click Sign In Button On Login Page" library="loginPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 19:18:53.023" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 19:18:48.021" endtime="20231204 19:18:53.023"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231204 19:18:53.026" level="INFO">Clicking element 'com.example.myapplication:id/signIn'.</msg>
+<msg timestamp="20231204 19:18:53.151" level="INFO">criteria is com.example.myapplication:id/signIn</msg>
+<status status="PASS" starttime="20231204 19:18:53.023" endtime="20231204 19:18:53.152"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:48.021" endtime="20231204 19:18:53.152"/>
+>>>>>>> 82faafe (Login Negative)
 </kw>
 <kw name="Close Flight Application" library="base">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
+<<<<<<< HEAD
 <status status="PASS" starttime="20231205 16:04:20.088" endtime="20231205 16:04:21.609"/>
 </kw>
 <status status="PASS" starttime="20231205 16:04:20.087" endtime="20231205 16:04:21.609"/>
@@ -149,6 +233,15 @@ criteria is com.example.myapplication:id/flight_number</msg>
 <status status="PASS" starttime="20231205 16:03:45.043" endtime="20231205 16:04:21.613"/>
 </test>
 <status status="PASS" starttime="20231205 16:03:44.614" endtime="20231205 16:04:21.625"/>
+=======
+<status status="PASS" starttime="20231204 19:18:53.156" endtime="20231204 19:18:53.816"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:53.155" endtime="20231204 19:18:53.816"/>
+</kw>
+<status status="PASS" starttime="20231204 19:18:30.450" endtime="20231204 19:18:53.818"/>
+</test>
+<status status="PASS" starttime="20231204 19:18:29.675" endtime="20231204 19:18:53.821"/>
+>>>>>>> 82faafe (Login Negative)
 </suite>
 <statistics>
 <total>
@@ -157,10 +250,17 @@ criteria is com.example.myapplication:id/flight_number</msg>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat pass="1" fail="0" skip="0" id="s1" name="searchRossy">searchRossy</stat>
 </suite>
 </statistics>
 <errors>
 <msg timestamp="20231205 16:03:45.038" level="ERROR">Error in file 'C:\Users\yesdok\Desktop\Sanber51-NewRepo\Sanber51-MobileQA-Kelompok8\pageObjectRossy\searchTaskRossy.robot' on line 4: Error in file 'C:\Users\yesdok\Desktop\Sanber51-NewRepo\Sanber51-MobileQA-Kelompok8\suitesRossy\searchRossy.robot' on line 10: Resource file with 'Test Cases' section is invalid.</msg>
+=======
+<stat pass="1" fail="0" skip="0" id="s1" name="loginNegative">loginNegative</stat>
+</suite>
+</statistics>
+<errors>
+>>>>>>> 82faafe (Login Negative)
 </errors>
 </robot>
